@@ -1,0 +1,168 @@
+  /* POPUP FILTRE */
+  .popup_filtre {
+    position: absolute;
+    display: none;
+    top: 119%;
+    left: 0;
+    padding: 0 8px;
+    background-color:#fff;
+    width: calc(100% - 15px)
+}
+.popup_filtre>* {
+    width: 100%;
+    margin: 8px 0;
+}
+.block {
+    display: block;
+}
+#connecte {
+    appearance: unset;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #720CEA;
+    cursor: pointer;
+}
+#connecte:checked::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #720CEA;
+}
+  
+
+/* BTN RECHERCHE */
+#btn_filtre, #btn_recherche {
+    cursor: pointer;
+}
+#btn_recherche {
+    background-image: url("../image/loupe.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 35px;
+    background-position: center;
+    background-color: #fff;
+    border: none;
+}
+#btn_filtre:hover, #btn_recherche:hover {
+    background-color: #720CEA;
+    color: #fff;
+}
+#btn_recherche:hover {
+    background-image: url("../image/loupe_copy.svg");
+}
+/* AUTO-COMPLETION THEME RECHERCHE */
+#theme {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    background-color: rgba(255,255,255,0.5);
+    width: calc(100% - 15px);
+    line-height: 25px;
+    cursor: pointer;
+}
+#theme p {
+    padding: 4px 8px;
+}
+.relative {
+    position: relative;
+}
+
+/* CARTE */
+
+div.ombrage-carte a, div.border-radius-10 a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* DISPONIBILITE */
+.table-dispo{
+    table-layout: fixed;
+    line-height: 32px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+.table-dispo td {
+    width : 32px;
+    height : 32px;
+    cursor : pointer;
+  }
+.table-dispo.no_pointer td{
+    cursor: initial;
+}
+.table-dispo  td{
+      border: 1px grey solid;
+  }
+  
+.table-dispo  tbody th{ 
+      border: none;  
+      width : 80px;
+      text-align: left;
+  }
+
+.table-dispo .dispo{
+      background-color:#720CEA;
+  }
+
+  /* BTN */
+  .btn_savoir {
+      color: #fff !important;
+      display: inline-block;
+  }
+
+  /* LETTRE PSEUDO */
+  .lettre_pseudo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      background-color: #720CEA;
+      color: #fff;
+      text-transform: uppercase;
+  }
+
+  /*
+  * -------------------------------------------
+    MESSAGES UTILISATEURS
+    --------------------------------------------
+  */
+  .user-messages-container{
+    position: fixed;
+    z-index : 95;
+    top: 70px;
+    width : 100%;
+    transition: top 1.5s linear;
+    animation: msgin 0.8s linear ;
+  }
+  .user-message{
+    width: 100%;
+    padding : 16px 64px;
+    font-weight: bold;
+  }
+  .user-message>div{
+      margin-bottom: 16px;
+  }
+  .user-message.success{
+    background-color: rgb(183, 255, 183);
+    color : rgb(1, 99, 1);
+  }
+  .user-message.warning{
+    background-color: rgb(254, 255, 171);
+    color : rgb(255, 157, 1)
+  }
+  .user-message.danger{
+    background-color: rgb(255, 142, 142);
+    color : rgb(195, 0, 0);
+  }
+
+  @keyframes msgin{
+      0%{
+          top : -100px;
+      }
+      100%{
+          top : 80px;
+      }
+  }
